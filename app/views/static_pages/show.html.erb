@@ -1,0 +1,47 @@
+<% content_for :page_title, "Check what ID is needed at interview" %>
+<% content_for :header_class, "with-proposition" %>
+<% content_for :proposition_header do %>
+
+<div class="header-proposition">
+  <div class="content">
+    <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+    <nav id="proposition-menu">
+      <a href="/" id="proposition-name">Check what ID is needed at interview</a>
+    </nav>
+  </div>
+</div>
+
+<% end %>
+
+<main id="content" role="main">
+<div id="page-container">
+	<div class="grid-row">
+    	<div class="column-two-thirds">
+			<h1>Document needed for interview</h1>
+
+			<p>Some intro text explaining what this is all about.</p>
+
+			<form action="/result" method="get">
+			<h2>Are you applying for a Home Office job?</h2>
+				<div class="form-group">
+					<fieldset class="inline">
+						<legend class="visually-hidden">Are you applying for a Home Office job?</legend>
+						<div class="multiple-choice">
+						<input id="ho-yes" type="radio" name="HO" value="1"><label for="ho-yes">Yes</label>
+						</div>
+						<div class="multiple-choice">
+						<input id="ho-no" type="radio" name="HO" value="0"><label for="ho-no">No</label>
+						</div>
+					</fieldset>
+				</div>
+
+				
+
+				<input class="button" type="submit" value="Submit">
+
+			</form>
+
+		</div>
+	</div>
+</div>
+</main>
