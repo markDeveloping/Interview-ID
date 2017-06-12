@@ -1,0 +1,110 @@
+<% content_for :page_title, "Check what ID is needed at interview" %>
+<% content_for :header_class, "with-proposition" %>
+<% content_for :proposition_header do %>
+
+<div class="header-proposition">
+  <div class="content">
+    <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
+    <nav id="proposition-menu">
+      <a href="/" id="proposition-name">Civil Service Jobs</a>
+    </nav>
+  </div>
+</div>
+
+<% end %>
+
+<main id="content" role="main">
+<div id="page-container">
+	<div class="grid-row">
+	<div class="column-two-thirds">
+    	
+			<h1 class="heading-xlarge">Check which ID documents are needed at interview</h1>
+
+			<%= form_for(@nationality) do |f| %>
+			<% if @nationality.errors.any? %>
+    			<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+			      <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1"><%= pluralize(@nationality.errors.count, "error") %> stop this form from submitting</h2>
+
+			      <ul class="error-summary-list">
+			      <% @nationality.errors.full_messages.each do |message| %>
+			        <li><%= message %></li>
+			      <% end %>
+			      </ul>
+			    </div>
+  			<% end %>
+			<h2 class="heading-medium">
+			  What is your nationality?
+			</h2>
+			
+			<details>
+
+  <summary><span class="summary">Help with nationality</span></summary>
+
+  <div class="panel panel-border-narrow">
+
+    <p>
+      If you’re not sure about your nationality, try to find out from an official document like a passport or national ID card.
+    </p>
+
+  </div>
+
+</details>
+
+			<div class="form-group">
+			    <fieldset>
+
+			      <legend class="visually-hidden">What is your nationality?</legend>
+
+			      <div class="multiple-choice">
+			        <%= f.radio_button :nat, '1' %>
+			        <%= f.label :nat_1,'UK National' %>
+			  
+			      </div>
+			      <div class="multiple-choice">
+			      	<%= f.radio_button :nat, "2" %>
+			      	<%= f.label :nat_2,'EEA or Swish National' %>
+			      </div>
+			      <div class="multiple-choice">
+			     	<%= f.radio_button :nat, "3" %>
+			     	<%= f.label :nat_3, 'Common Wealth Citizen or British Protected Person' %>
+			      </div>
+			      <div class="multiple-choice">
+			      	<%= f.radio_button :nat, "4" %>
+			      	<%= f.label :nat_4,'Qualifying Turkish National' %>
+			      </div>
+			      <div class="multiple-choice">
+			      	<%= f.radio_button :nat, "5" %>
+			      	<%= f.label :nat_5,'Family member of a UK, EEA, Swish or Qualifying Turkish National' %>
+			      </div>
+			      <div class="multiple-choice">
+			      	<%= f.radio_button :nat, "6" %>
+			      	<%= f.label :nat_6,'Other' %>
+			      </div>
+
+			    </fieldset>
+		 	 </div>
+
+			<h2 class="heading-medium">Are you applying for a job with the Home Office?</h2>
+				<div class="form-group">
+					<fieldset class="inline">
+						<legend class="visually-hidden">Are you applying for a Home Office job?</legend>
+						<div class="multiple-choice">
+						<%= f.radio_button :ho, "yes" %>
+						<%= f.label :ho_yes,'Yes' %>
+						</div>
+						<div class="multiple-choice">
+						<%= f.radio_button :ho, "no" %>
+						<%= f.label :ho_no,'No' %>
+						</div>
+					</fieldset>
+				</div>
+
+				
+				<%= f.submit("Search", class: "button") %>
+
+			<% end 	%>
+
+		</div>
+	</div>
+</div>
+</main>

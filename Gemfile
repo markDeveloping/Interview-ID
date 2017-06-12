@@ -28,6 +28,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'govuk_frontend_toolkit'
 
 gem 'govuk_template'
+
+gem 'govuk_elements_rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
