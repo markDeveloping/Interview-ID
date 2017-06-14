@@ -4,24 +4,12 @@ This repository contains an app which looks to make it easier for applicants to 
 
 Specification:
 
-* Ruby version
+* Ruby version 2.3.1
 
-* System dependencies
+* Dpendencies are managed using a GEM file - when running the application locally run bundle install to install dependencies
 
-* Configuration
+* No configuration needed on this application as it isn't database driven, the app uses tableless models for form validation and error handling
 
-* Database creation
+* after running bundle install, it'll be possible to use the applications locally by running rails s in the command line
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* The easiest way of deploying this app is by using Heroku - details can be found on the Heroku website
