@@ -29,7 +29,9 @@
 @import 'form-multiple-choice';    // Custom radio buttons and checkboxes
 @import 'elements/forms/form-block-labels';
 @import 'elements/forms/form-date';
-@import 'elements/forms/form-validation';
+@import 'form-validation';
+
+
 
 #page-container {
   @extend %site-width-container;
@@ -43,9 +45,16 @@
   .column-two-thirds {
     @include grid-column( 2/3 );
   }
+  .column-three-thirds {
+    @include grid-column( 3/3 );
+  }
 }
 .hero-image {
   @extend %outdent-to-full-width;
+}
+
+.hide {
+  display: none;
 }
 
 h1 {
@@ -62,4 +71,16 @@ p {
 
 .button{
   @include button;
+}
+
+.banner {
+  background-color: $turquoise;
+  color: $page-colour;
+  margin-left: 15px;
+  a {
+  color: $page-colour;
+&:hover {
+color: $yellow;
+  }
+}
 }

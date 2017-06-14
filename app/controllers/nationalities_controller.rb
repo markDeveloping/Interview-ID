@@ -24,7 +24,7 @@ private
 
 # Never trust parameters from the scary internet, only allow the white list through.
     def nationality_params
-      params.require(:nationality).permit(:nat, :ho)
+      params.require(:nationality).permit(:hid, :nat, :ho)
     end
 	
 end

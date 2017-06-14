@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'results' => 'nationalities#results'
 
+  get 'nationalities' => 'nationalities#new'
+
   resources :nationalities
 
   # Example of regular route:

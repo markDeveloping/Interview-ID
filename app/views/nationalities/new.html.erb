@@ -24,15 +24,15 @@
 			<% if @nationality.errors.any? %>
     			<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
 			      <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1"><%= pluralize(@nationality.errors.count, "error") %> stop this form from submitting</h2>
-
+			      <% if @nationality.errors.any? %>
 			      <ul class="error-summary-list">
-			      <% @nationality.errors.full_messages.each do |message| %>
-			        <li><%= message %></li>
-			      <% end %>
+			        <% if @nationality.errors[:nat].any? %><li><a href="/nationalities#nat--error" onclick="document.getElementById('nat--error').scrollIntoView(); return false;">Nationality can't be blank</a></li><% end %>
+			        <% if @nationality.errors[:ho].any? %><li><a href="/nationalities#ho--error" onclick="document.getElementById('ho--error').scrollIntoView(); return false;">Home Office can't be blank</a></li><% end %>
 			      </ul>
+			      <% end %>
 			    </div>
   			<% end %>
-			<h2 class="heading-medium">
+			<h2  id="nat--error" class="heading-medium">
 			  What is your nationality?
 			</h2>
 			
@@ -50,7 +50,7 @@
 
 </details>
 
-			<div class="form-group">
+			<div class="form-group<% if @nationality.errors[:nat].any? %> form-group-error<% end %>">
 			    <fieldset>
 
 			      <legend class="visually-hidden">What is your nationality?</legend>
@@ -68,13 +68,16 @@
 			     	<%= f.radio_button :nat, "3" %>
 			     	<%= f.label :nat_3, 'Common Wealth Citizen or British Protected Person' %>
 			      </div>
+			      <div style="display:none;">
+			      	<%= f.text_area(:hid, size: '50x10') %>
+			      </div>
 			      <div class="multiple-choice">
 			      	<%= f.radio_button :nat, "4" %>
 			      	<%= f.label :nat_4,'Qualifying Turkish National' %>
 			      </div>
 			      <div class="multiple-choice">
 			      	<%= f.radio_button :nat, "5" %>
-			      	<%= f.label :nat_5,'Family member of a UK, EEA, Swish or Qualifying Turkish National' %>
+			      	<%= f.label :nat_5,'Family member of a UK, EEA, Swiss or Qualifying Turkish National' %>
 			      </div>
 			      <div class="multiple-choice">
 			      	<%= f.radio_button :nat, "6" %>
@@ -84,8 +87,8 @@
 			    </fieldset>
 		 	 </div>
 
-			<h2 class="heading-medium">Are you applying for a job with the Home Office?</h2>
-				<div class="form-group">
+			<h2 id="ho--error" class="heading-medium">Are you applying for a job with the Home Office?</h2>
+				<div class="form-group<% if @nationality.errors[:ho].any? %> form-group-error<% end %>">
 					<fieldset class="inline">
 						<legend class="visually-hidden">Are you applying for a Home Office job?</legend>
 						<div class="multiple-choice">

@@ -10,6 +10,7 @@ Rails.application.config.assets.precompile += %w( apple-touch-icon-60x60.png )
 Rails.application.config.assets.precompile += %w( opengraph-image.png )
 Rails.application.config.assets.precompile += %w( gov.uk_logotype_crown_invert_trans.png )
 
+
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

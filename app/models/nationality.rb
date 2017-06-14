@@ -1,7 +1,7 @@
 class Nationality
 
 	include ActiveModel::Model
-  	attr_accessor :ho, :nat
+  	attr_accessor :ho, :nat, :hid
 
  
   validates :ho, presence: true

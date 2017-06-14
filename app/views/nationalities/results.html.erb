@@ -1,6 +1,8 @@
 <% content_for :page_title, "Check what ID is needed at interview" %>
 <% content_for :header_class, "with-proposition" %>
 <% content_for :proposition_header do %>
+<% content_for :javascript_includes do %>
+<% end %>
 
 <div class="header-proposition">
   <div class="content">
@@ -17,36 +19,58 @@
 <div id="page-container">
 	<div class="grid-row">
 	<div class="column-two-thirds">
-  <h1 class="heading-xlarge">Your results</h1>
-	<h2 class="heading-large">You need to bring</h2>
-  <div id="ho">
+   <h1 class="heading-xlarge">Accepted documents</h1>
+  
+  <div class="show">
+    <h2 class="heading-large">Important</h2>
+<p>We cannot limit the information on this page to show you the relevant content only as your browser doesn't use JavaScript.</p>
+<p>This page therefore will show you information relevant to all nationality types.</p>
+  </div>
+</div>
+  <div class="column-two-thirds banner hide">
+    <h2 class="heading-medium">Your information</h2>
+    <p class="">You have indicated that your:</p>
+    <ol class="list list-bullet">
+      <li class="li--1">a UK National</li>
+      <li class="li--2">applying for a job with the Home Office</li>
+    </ol>
+    <p><a href="/">Change your details</a></p>
+  </div>
+<div class="column-two-thirds">
+        <h3 class="heading-medium">Photographic ID</h3>
+        <p>If none of the documents include a photo of yourself, you must bring a passport sized picture with you to interview.</p>
+        <p>This picture must be endorsed on the back, with the signature of a person of standing in your community. For example a GP, medical practioner, teacher, civil servant, bank manager, lawyer, officer of the armed forces or lecturer.</p>
+    </div>
+    <div class="column-two-thirds">
+      <h2 class="heading-medium">You must bring</h2>
+  <div class="ho hide">
     <ul class="list list-bullet">
       <li>A current passport</li>
       <li>A document from group 2</li>
-      <li>Additional document from group 1, 2 or 3</li>
+      <li>An additional document from group 1, 2 or 3</li>
     </ul>
   </div>
-  <div id="no--ho">
+  <div class="no--ho">
     <ul class="list list-bullet">
       <li>A document from group 1</li>
       <li>A document from group 2</li>
       <li>Additional document from group 1, 2 or 3</li>
     </ul>
   </div>
-  <h3 class="heading-medium">Photographic ID</h3>
-  <p>If none of the documents include a photo of yourself, you must bring a passport sized picture with you to interview.</p>
-  <p>This picture must be endorsed on the back, with the signature of a person of standing in your community. For example a GP, medical practioner, teacher, civil servant, bank manager, lawyer, officer of the armed forces, lecturer.</p>
-	</div>
-    <div class="column-two-thirds">
-      <h2 class="heading-large">Accepted documents</h2>
-
-      <div class="panel panel-border-wide">
+  <div class="panel panel-border-wide">
           <p>Only original documents will be accepted, photocopies will not be accepted.</p>
       </div>
- 
+  <div class="show">
+    If you're apply for a job in the Home Office you must bring a current passport to your interview.
+  </div>
+
     </div>
     <div class="section--1">
     <div class="column-two-thirds">
+    <div class="show">
+    <h3 class="heading-medium">UK National</h3>
+    <p>You should refer to the below table if you're a UK national.</p>
+    </div>
         <table>
           <thead>
             <tr>
@@ -93,6 +117,10 @@
     </div>
     <div class="section--2">
     <div class="column-two-thirds">
+    <div class="show">
+    <h3 class="heading-medium">European Economic Area or Swiss National</h3>
+    <p>You should refer to the below table if you're a European Economic Area or Swiss National.</p>
+    </div>
         <table>
           <thead>
             <tr>
@@ -139,6 +167,23 @@
     </div>
     <div class="section--3">
     <div class="column-two-thirds">
+    <div class="show">
+    <h3 class="heading-medium">Other eligible citizens</h3>
+    <p>You should refer to the below table if you're a:</p>
+    <ul class="list-bullet">
+      <li>Common Wealth Citizen</li>
+      <li>British Protected Citizen</li>
+      <li>Qualify Turkish National</li>
+    </ul>
+    
+    <p>Or if you're a familly member of a:</p>
+    <ul class="list-bullet">
+      <li>UK National</li>
+      <li>European Economic Area National</li>
+      <li>Swiss National</li>
+      <li>Qualifying Turkish National</li>
+    </ul>
+    </div>
         <table>
           <thead>
             <tr>
@@ -183,7 +228,10 @@
 
     </div>
     </div>
-
+    <div class="column-two-thirds show other">
+      <h2 class="heading-medium">Other nationality</h2>
+      <p>If your nationality isn't listed above and none of the groups are relevant to you email us: <a href="mailto:specialist.recruitment@csresourcing.gsi.gov.uk">specialist.recruitment@csresourcing.gsi.gov.uk</a>.</p>
+    </div>
 	</div>	
 </div>
 </main>

@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
+
 module InterviewId
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -22,6 +24,9 @@ module InterviewId
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance| 
+  html_tag
+}
     config.assets.precompile += %w(
   application.css
   application-ie8.css
