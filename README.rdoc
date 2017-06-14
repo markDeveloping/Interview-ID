@@ -1,9 +1,8 @@
-== README
+== Interview ID documents
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository contains an app which looks to make it easier for applicants to understand what ID documents need to be brought to interview. Documents are needed to prove right to work and the documents also need to be checked to enable DBS checks. 
 
-Things you may want to cover:
+Specification:
 
 * Ruby version
 
