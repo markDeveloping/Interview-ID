@@ -6,10 +6,10 @@ Specification:
 
 * Ruby version 2.3.1
 
-* Dpendencies are managed using a GEM file - when running the application locally run bundle install to install dependencies
+* Dependencies are managed using a Gemfile - when running the application locally run bundle install to install dependencies
 
 * No configuration needed on this application as it isn't database driven, the app uses tableless models for form validation and error handling
 
-* after running bundle install, it'll be possible to use the applications locally by running rails s in the command line
+* after running bundle install, it'll be possible to use the applications locally by running "rails s" in the command line
 
 * The easiest way of deploying this app is by using Heroku - details can be found on the Heroku website
