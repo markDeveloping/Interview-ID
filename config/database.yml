@@ -21,7 +21,7 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: myapp_production
-  username: myapp
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  database: my_database_development
+  pool: 5
+  port: 5000
