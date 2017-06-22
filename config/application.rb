@@ -27,14 +27,6 @@ module InterviewId
     config.action_view.field_error_proc = Proc.new { |html_tag, instance| 
   html_tag
 config.serve_static_assets = true
-  config.assets.precompile += %w(
-  application.css
-  application-ie8.css
-  application-ie7.css
-  application-ie6.css
-  application.js
-)
-
 }
     
   end
