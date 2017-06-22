@@ -26,7 +26,10 @@ module InterviewId
     config.active_record.raise_in_transactional_callbacks = true
     config.action_view.field_error_proc = Proc.new { |html_tag, instance| 
   html_tag
-config.serve_static_assets = true
+
+  config.assets.compile = true
+  config.assets.precompile =  ['*.js', '*.css', '*.css.erb']
+
 }
     
   end
