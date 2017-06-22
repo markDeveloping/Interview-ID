@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/alphagov/govuk_frontend_toolkit_gem.git
+  revision: d1c9ade1c24a1fc334022a2df869c339cce821b2
+  submodules: true
+  specs:
+    govuk_frontend_toolkit (6.0.4)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -57,9 +66,6 @@ GEM
     govuk_elements_rails (0.3.0)
       rails (~> 4.1, >= 4.1.0)
       sass (~> 3.2, >= 3.2.0)
-    govuk_frontend_toolkit (4.6.0)
-      rails (>= 3.1.0)
-      sass (>= 3.2.0)
     govuk_template (0.16.1)
       rails (>= 3.1)
     i18n (0.8.1)
@@ -160,7 +166,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   govuk_elements_rails
-  govuk_frontend_toolkit
+  govuk_frontend_toolkit!
   govuk_template
   jbuilder (~> 2.0)
   jquery-rails
