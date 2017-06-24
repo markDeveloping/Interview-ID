@@ -9,6 +9,8 @@
   <%= csrf_meta_tags %>
 <% end %> 
 
+
+
 <% end %>
 
 <div class="header-proposition">
@@ -24,6 +26,12 @@
 
 <main id="content" role="main">
 <div id="page-container">
+<div class="phase-banner">
+  <p>
+    <strong class="phase-tag">ALPHA</strong>
+    <span>This is a prototype.</span>
+  </p>
+</div>
 	<div class="grid-row">
 	<div class="column-two-thirds">
    <h1 class="heading-xlarge">Accepted documents</h1>
@@ -242,3 +250,42 @@
 	</div>	
 </div>
 </main>
+<script type="text/javascript">
+
+$( document ).ready( function() {
+  if (ho === "no") {
+  $('.ho').hide();
+  $('.li--2').text("not applying for a job in the Home Office");
+  }
+  else if (ho === "yes") {
+  $('.no--ho').hide();
+  }
+  else {
+    window.location.replace("/");
+  };
+
+  if (nat === "1") {
+  $('.section--2, .section--3').hide();
+}
+else if (nat === "2") {
+  $('.section--1, .section--3').hide();
+  $('.li--1').text("a European Economic Area or Swiss National");
+}
+else if (nat === "3") {
+  $('.section--1, .section--2').hide();
+  $('.li--1').text("a Commonwealth Citizen or British Protected Person");
+}
+else if (nat === "4") {
+  $('.section--1, .section--2').hide();
+  $('.li--1').text("a Qualifying Turkish National");
+}
+else if(nat === "5") {
+  $('.section--1, .section--2').hide();
+  $('.li--1').text("a family member of a UK, EEA, Swiss or Qualifying Turkish National");
+}
+else {
+  window.location.replace("/");
+};
+
+})
+</script>
