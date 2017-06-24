@@ -2,6 +2,12 @@
 <% content_for :header_class, "with-proposition" %>
 <% content_for :proposition_header do %>
 
+<% content_for :head do %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<% end %>	
+
 <div class="header-proposition">
   <div class="content">
     <a href="#proposition-links" class="js-header-toggle menu">Menu</a>
