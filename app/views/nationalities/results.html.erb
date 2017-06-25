@@ -52,7 +52,9 @@
     <p><a href="/">Change your details</a></p>
   </div>
     <div class="column-two-thirds">
+    <div class="doc--heading">
       <h2 class="heading-large">You must bring 3 documents</h2>
+      </div>
   <div class="ho hide">
     <ul class="list list-bullet">
       <li>A current passport</li>
@@ -67,7 +69,7 @@
       <li>Additional document from group 1, 2 or 3</li>
     </ul>
   </div>
-  <div class="panel panel-border-wide">
+  <div class="panel panel-border-wide originals">
           <p>Only original documents will be accepted, photocopies will not be accepted.</p>
       </div>
   <div class="show">
@@ -239,14 +241,14 @@
     </div>
     
     </div>
-    <div class="column-two-thirds">
+    <div class="column-two-thirds photo--id">
         <h3 class="heading-medium">Photographic ID</h3>
         <p>If none of the documents include a photo of yourself, you must bring a passport sized picture with you to interview.</p>
         <p>This picture must be endorsed on the back, with the signature of a person of standing in your community. For example a GP, medical practioner, teacher, civil servant, bank manager, lawyer, officer of the armed forces or lecturer.</p>
     </div>
     <div class="column-two-thirds show other">
       <h2 class="heading-medium">Other nationality</h2>
-      <p>If your nationality isn't listed above and none of the groups are relevant to you email us: <a href="mailto:specialist.recruitment@csresourcing.gsi.gov.uk">specialist.recruitment@csresourcing.gsi.gov.uk</a>.</p>
+      <p>Email us with details at <a href="mailto:specialist.recruitment@csresourcing.gsi.gov.uk">specialist.recruitment@csresourcing.gsi.gov.uk</a>.</p>
     </div>
 	</div>	
 </div>
@@ -283,6 +285,13 @@ else if (nat === "4") {
 else if(nat === "5") {
   $('.section--1, .section--2').hide();
   $('.li--1').text("a family member of a UK, EEA, Swiss or Qualifying Turkish National");
+}
+else if(nat === "6") {
+  $('.hide').hide();
+  $('.section--1, .section--2, .section--3, .ho, .no--ho, .originals, .doc--heading').hide();
+  $('.photo--id').hide();
+  $('.other').show();
+  $('.heading-xlarge').html('Nationality not listed');
 }
 else {
   window.location.replace("/");
