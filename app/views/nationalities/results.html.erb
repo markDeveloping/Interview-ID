@@ -94,12 +94,12 @@
           <tbody>
             <tr>
               <td>Current British Passport</td>
-              <td>Bank, building society or credit card statement</td>
+              <td>Bank, building society or credit card statement (issued in the last 3 months)</td>
               <td>Current driving licence</td>
             </tr>
             <tr>
               <td>Full UK Birth or Adoption Certificate</td>
-              <td>Utility bill</td>
+              <td>Utility bill (issued in the last 3 months)</td>
               <td>Short UK Birth Certificate</td>
             </tr>
             <tr>
@@ -109,12 +109,12 @@
             </tr>
             <tr>
               <td></td>
-              <td>Current evidence of entitlement to DWP benefits</td>
+              <td>Current evidence of entitlement to DWP benefits (issued within the last 3 months)</td>
               <td>Civil Partnership certificate</td>
             </tr>
             <tr>
               <td></td>
-              <td>Council Tax statement</td>
+              <td>Council Tax statement (issued within the last 3 months)</td>
               <td>HM Forces identity card</td>
             </tr>
             <tr>
@@ -144,12 +144,12 @@
           <tbody>
             <tr>
               <td>Current EEA or Swiss Passport</td>
-              <td>Bank, building society or credit card statement</td>
+              <td>Bank, building society or credit card statement (issued within the last 3 months)</td>
               <td>Current driving licence</td>
             </tr>
             <tr>
               <td>Registration Certificate or Document Certifying Permanent Residence issued by Home Office</td>
-              <td>Utility bill</td>
+              <td>Utility bill (issued within the last 3 months)</td>
               <td>Marriage certificate</td>
             </tr>
             <tr>
@@ -159,12 +159,12 @@
             </tr>
             <tr>
               <td></td>
-              <td>Current evidence of entitlement to DWP benefits</td>
+              <td>Current evidence of entitlement to DWP benefits (issued within the last 3 months)</td>
               <td>HM Forces identity card</td>
             </tr>
             <tr>
               <td></td>
-              <td>Council Tax statement</td>
+              <td>Council Tax statement (issued within the last 3 months)</td>
               <td>EU National Identity Card</td>
             </tr>
             <tr>
@@ -207,12 +207,12 @@
           <tbody>
             <tr>
               <td>Current Passport from country of nationality</td>
-              <td>Bank, building society or credit card statement</td>
+              <td>Bank, building society or credit card statement (issued within the last 3 months)</td>
               <td>Current driving licence</td>
             </tr>
             <tr>
               <td>Biometric Residence Permit Card</td>
-              <td>Utility bill</td>
+              <td>Utility bill (issued within the last 3 months)</td>
               <td>Marriage certificate</td>
             </tr>
             <tr>
@@ -222,12 +222,12 @@
             </tr>
             <tr>
               <td></td>
-              <td>Current evidence of entitlement to DWP benefits</td>
+              <td>Current evidence of entitlement to DWP benefits (issued within the last 3 months)</td>
               <td>HM Forces identity card</td>
             </tr>
             <tr>
               <td></td>
-              <td>Council Tax statement</td>
+              <td>Council Tax statement (issued within the last 3 months)</td>
               <td></td>
             </tr>
             <tr>
@@ -287,9 +287,7 @@ else if(nat === "5") {
   $('.li--1').text("a family member of a UK, EEA, Swiss or Qualifying Turkish National");
 }
 else if(nat === "6") {
-  $('.hide').hide();
-  $('.section--1, .section--2, .section--3, .ho, .no--ho, .originals, .doc--heading').hide();
-  $('.photo--id').hide();
+  $('.hide, .photo--id, .section--1, .section--2, .section--3, .ho, .no--ho, .originals, .doc--heading').hide();
   $('.other').show();
   $('.heading-xlarge').html('Nationality not listed');
 }

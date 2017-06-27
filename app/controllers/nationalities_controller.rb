@@ -1,4 +1,5 @@
 class NationalitiesController < ApplicationController
+http_basic_authenticate_with name: "CSHR", password: "Password123!"
 
 	def new
 		@nationality = Nationality.new
